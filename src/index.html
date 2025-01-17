@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسک دوره جاوااسکریپت</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="w-8/12 h-fit container mx-auto" id="show__transactionBOX">
+      <!-- button and title transaction -->
+      <div class="mt-20">
+        <h1 class="text-blue-500 font-extrabold text-xl">لیست تراکنش ها</h1>
+        <div
+          class="w-full h-fit mt-6 flex flex-row items-center justify-center"
+        >
+          <button
+            id="show__transactionBTN"
+            class="bg-blue-500 hover:bg-blue-600 py-2 px-6 rounded-lg text-white"
+          >
+            بارگذاری تراکنش ها
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- table and sort and search transaction -->
+    <div class="w-8/12 h-fit container mx-auto mt-10">
+      <div style="display: none" id="main__box">
+        <!-- search and sort transaction -->
+        <div class="flex flex-row items-center justify-between">
+          <h1 class="text-blue-500 font-extrabold text-xl">لیست تراکنش ها</h1>
+          <div class="w-full max-w-sm min-w-[200px]">
+            <div class="relative flex flex-row">
+              <input
+                id="search"
+                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md pl-3 pr-28 py-2 transition duration-300 ease focus:outline-none focus:border-2 focus:border-blue-500 hover:border-slate-300 shadow-sm focus:shadow"
+                placeholder="جستجو تراکنش..."
+              />
+              <button
+                class="absolute top-1 right-1 flex items-center rounded bg-blue-500 py-1 px-3 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow focus:bg-blue-600 focus:shadow-none active:bg-blue-600 hover:bg-blue-600 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                type="button"
+              >
+                جستجو
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5 mr-2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- table transaction -->
+        <div class="relative flex flex-col w-full h-full mt-5 text-gray-700">
+          <table
+            id="table__transaction"
+            class="w-full text-center table-auto min-w-max text-slate-700"
+          >
+            <thead>
+              <tr class="text-slate-500 border-b border-slate-300 bg-blue-100">
+                <th class="p-4">
+                  <p class="text-sm leading-none font-normal">ردیف</p>
+                </th>
+                <th class="p-4">
+                  <p class="text-sm leading-none font-normal">نوع تراکنش</p>
+                </th>
+                <th class="p-2 flex flex-row items-center justify-center">
+                  <p class="text-sm leading-none font-normal">مبلغ</p>
+                  <i class="fa-solid p-2 fa-sort-down icon-price-reverse"></i>
+                </th>
+                <th class="p-4">
+                  <p class="text-sm leading-none font-normal">شماره پیگیری</p>
+                </th>
+                <th class="p-2 flex flex-row items-center justify-center">
+                  <p class="text-sm leading-none font-normal">تاریخ تراکنش</p>
+                  <i class="fa-solid p-2 fa-sort-down icon-date-reverse"></i>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="table__body">
+              <tr id="trTableBody" class="bg-blue-50">
+                <td class="p-4">
+                  <p class="text-sm">2</p>
+                </td>
+                <td class="p-4">
+                  <p class="text-sm text-green-600">افزایش اعتبار</p>
+                </td>
+                <td class="p-4">
+                  <p class="text-sm">1,000,000</p>
+                </td>
+                <td class="p-4">
+                  <p class="text-sm">123126411</p>
+                </td>
+                <td class="p-4">
+                  <p class="">۱۳۹۹/۰۸/۱۲ ساعت ۱۲:۲۳</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
