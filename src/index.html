@@ -6,6 +6,7 @@
     <title>تسک دوره جاوااسکریپت</title>
     <link rel="stylesheet" href="./styles/index.css" />
     <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -33,12 +34,16 @@
       </div>
     </div>
     <!-- table and sort and search transaction -->
-    <div class="w-8/12 h-fit container mx-auto mt-10">
+    <div class="md:w-11/12 sm:w-10/12 w-10/12 h-fit container mx-auto mt-10">
       <div style="display: none" id="main__box">
         <!-- search and sort transaction -->
-        <div class="flex flex-row items-center justify-between">
-          <h1 class="text-blue-500 font-extrabold text-xl">لیست تراکنش ها</h1>
-          <div class="w-full max-w-sm min-w-[200px]">
+        <div
+          class="flex md:flex-row md:items-center md:justify-between flex-col"
+        >
+          <h1 class="text-blue-500 font-extrabold text-xl mb-5 md:mb-0">
+            لیست تراکنش ها
+          </h1>
+          <div class="w-full sm:w-full md:max-w-[30rem]">
             <div class="relative flex flex-row">
               <input
                 id="search"
@@ -69,7 +74,9 @@
           </div>
         </div>
         <!-- table transaction -->
-        <div class="relative flex flex-col w-full h-full mt-5 text-gray-700">
+        <div
+          class="relative flex flex-col h-full mt-5 text-gray-700 max-w-full sm:max-w-full md:max-w-full overflow-x-auto rounded-lg"
+        >
           <table
             id="table__transaction"
             class="w-full text-center table-auto min-w-max text-slate-700"
@@ -96,7 +103,7 @@
               </tr>
             </thead>
             <tbody id="table__body">
-              <tr id="trTableBody" class="bg-blue-50">
+              <!-- <tr id="trTableBody">
                 <td class="p-4">
                   <p class="text-sm">2</p>
                 </td>
@@ -112,13 +119,14 @@
                 <td class="p-4">
                   <p class="">۱۳۹۹/۰۸/۱۲ ساعت ۱۲:۲۳</p>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
   </body>
 </html>
